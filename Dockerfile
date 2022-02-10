@@ -7,6 +7,10 @@ FROM node:alpine
 RUN mkdir -p /usr/src
 WORKDIR /usr/src
 
+ENV NEXT_PUBLIC_DB_HOST ${NEXT_PUBLIC_DB_HOST}
+ENV DB_USER ${process.env.DB_USER}
+ENV NEXT_PUBLIC_DB_PASS ${process.env.NEXT_PUBLIC_DB_PASS}
+
 # copy source files
 COPY . .
 
