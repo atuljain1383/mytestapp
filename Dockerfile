@@ -7,6 +7,7 @@ FROM node:alpine
 RUN mkdir -p /usr/src
 WORKDIR /usr/src
 
+ARG NEXT_PUBLIC_DB_HOST
 ENV NEXT_PUBLIC_DB_HOST ${NEXT_PUBLIC_DB_HOST}
 
 
